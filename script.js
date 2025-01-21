@@ -16,6 +16,10 @@ function salvarTarefas() {
         let linkText = document.createTextNode("Excluir");
         linkElement.appendChild(linkText);
 
+        let posicao = tarefas.indexOf(resultado);
+
+        linkElement.setAttribute("onclick", `deletarTarefa(${posicao})`);
+
         liElement.appendChild(tarefaText);
         liElement.appendChild(linkElement);
         listElement.appendChild(liElement);
@@ -35,4 +39,8 @@ function adicionarTarefas() {
 }
 
 buttonElement.onclick = adicionarTarefas;
- 
+
+function deletarTarefa(posicao) {
+    tarefas.splice(posicao, 1);
+    salvarTarefas();
+}
