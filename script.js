@@ -10,7 +10,14 @@ function salvarTarefas() {
         let liElement = document.createElement("li");
         let tarefaText = document.createTextNode(resultado);
 
+        let linkElement = document.createElement("a");
+        linkElement.setAttribute("href", "#");
+
+        let linkText = document.createTextNode("Excluir");
+        linkElement.appendChild(linkText);
+
         liElement.appendChild(tarefaText);
+        liElement.appendChild(linkElement);
         listElement.appendChild(liElement);
     });
 }
@@ -28,3 +35,4 @@ function adicionarTarefas() {
 }
 
 buttonElement.onclick = adicionarTarefas;
+ 
