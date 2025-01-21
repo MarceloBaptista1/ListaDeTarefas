@@ -23,7 +23,9 @@ body {
     width: 100%;
     align-items: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
 }
 
 #app button {
@@ -55,10 +57,9 @@ body {
 }
 
 ul {
+    max-width: 500px;
+    width: 100%;
     list-style-type: none;
-    padding: 0;
-    text-align: left;
-    margin-right: 20px;
 }
 
 ul li {
